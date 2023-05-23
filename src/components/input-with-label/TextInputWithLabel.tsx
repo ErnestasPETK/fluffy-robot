@@ -1,25 +1,23 @@
 import {
     StyledContainer,
     StyledInput,
-    StyledInputInactive,
     StyledLabel,
 } from "./TextInputWithLabel.styled";
 import InputMessage from "./InputMessage";
 import { UseFormRegister } from "react-hook-form";
 
-
 export type Message = {
-    messageType?: "INFO" | "ERROR",
-    text?: string,
-}
+    messageType?: "INFO" | "ERROR";
+    text?: string;
+};
 
 type ControlProps = {
     active: boolean;
     is_valid: string;
-}
+};
 
 export interface Props extends Message, ControlProps {
-    register: UseFormRegister<any>,
+    register: UseFormRegister<any>;
     type: string;
     name: string;
     label: string;

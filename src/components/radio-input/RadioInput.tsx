@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
+import { StyledRadioInput } from "./RadioInput.styled";
 type ControlProps = {
     active: boolean;
 };
@@ -14,20 +17,23 @@ interface RadioInputProps extends ControlProps {
 }
 
 const RadioInput = (props: RadioInputProps): JSX.Element => {
-    const { active, choices, onChangeFn, preSelected } = props;
+    const { theme } = useContext(GlobalContext);
+    const { choices, onChangeFn, preSelected } = props;
     return (
         <div>
             {choices.map((choice) => {
                 return (
                     <div key={choice.label}>
-                        <input
+                        <StyledRadioInput
+                            contexttheme={theme}
                             type="radio"
                             name="unique"
                             id={choice.label}
                             value={choice.value}
-                            onChange={(event) => onChangeFn(event.target.value)}
+                            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                                onChangeFn(event.target.value)
+                            }
                             checked={preSelected === choice.value}
-
                         />
                         <label htmlFor={choice.label}>{choice.label}</label>
                     </div>

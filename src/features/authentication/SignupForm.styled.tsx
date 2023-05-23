@@ -7,13 +7,11 @@ export const StyledSignupForm = styled.div`
   width: auto;
   height: auto;
   @media (min-width: 768px) {
-  padding:10% 20%;
+    padding: 10% 20%;
   }
   @media (min-width: 1024px) {
-
   }
   @media (min-width: 1200px) {
-
   }
 `;
 
@@ -21,20 +19,12 @@ export const StyledInputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 100%;
-  height: 100%;
   @media (min-width: 768px) {
-  width: 90%;
-
+    width: 90%;
   }
   @media (min-width: 1024px) {
-  width: 60%;
-
-
+    width: 60%;
   }
   @media (min-width: 1200px) {
-  width: 60%;
-
-
   }
 `;

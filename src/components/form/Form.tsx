@@ -1,5 +1,4 @@
 import { StyledForm, StyledTitle } from "./Form.styled";
-import InlineNotification from "../inline-notification/InlineNotification";
 
 type Props = {
     title: string;
@@ -8,9 +7,6 @@ type Props = {
         e?: React.BaseSyntheticEvent<object, any, any> | undefined
     ) => Promise<void>;
 };
-
-
-
 
 const Form = (props: Props): JSX.Element => {
     const { title, children, onSubmit } = props;

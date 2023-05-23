@@ -11,7 +11,8 @@ export const StyledContainer = styled.div`
 
 export const StyledInput = styled.input<inputProps>`
   border: 0.0625rem solid
-    ${(props) => (props.is_valid === "true" ? "rgb(221, 223, 229)" : "rgb(255, 153, 150)")};
+    ${(props) =>
+    props.is_valid === "true" ? "rgb(221, 223, 229)" : "rgb(255, 153, 150)"};
   padding: 0.75rem 2.8125rem 0.75rem 1rem;
   width: 100%;
   background: #fbfbfd;
@@ -39,7 +40,6 @@ export const StyledInputInactive = styled(StyledInput)`
 `;
 
 export const StyledLabel = styled.label`
-  color: rgb(52, 57, 74);
   display: inline-block;
   font-family: Poppins, sans-serif;
   font-size: 1rem;

@@ -6,19 +6,19 @@ export const StyledForm = styled.form`
   gap: 1rem;
   width: 100%;
   height: 100%;
-  padding:1rem 0.5rem;
+  padding: 1rem 0.5rem;
 `;
 
 export const StyledTitle = styled.h2`
   font-size: 3rem;
   margin: 0 0 1rem 0;
+
   @media (min-width: 768px) {
     margin: 0 0 2rem 0;
   }
   @media (min-width: 1024px) {
   }
   @media (min-width: 1200px) {
-
   }
 `;
 
@@ -34,7 +34,6 @@ export const StyledInputContainer = styled.div`
   }
   @media (min-width: 1200px) {
     width: 30%;
-
   }
 `;
 export const StyledButtonContainer = styled.div`

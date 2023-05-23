@@ -6,7 +6,7 @@ import { useContext } from "react";
 const Signup = (): JSX.Element => {
     const { theme } = useContext(GlobalContext);
     return (
-        <StyledSignupForm Theme={theme}>
+        <StyledSignupForm contexttheme={theme}>
             <SignupForm />
         </StyledSignupForm>
     );

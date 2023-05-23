@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { Props } from "./NumberSelectWithLabel";
 
-
 type optionProps = Props;
-
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -12,7 +10,6 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledLabel = styled.label`
-  color: rgb(52, 57, 74);
   display: inline-block;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
@@ -28,7 +25,8 @@ export const StyledLabel = styled.label`
 
 export const StyledSelect = styled.select<optionProps>`
   border: 0.0625rem solid
-    ${(props) => (props.is_valid === "true" ? "rgb(221, 223, 229)" : "rgb(255, 153, 150)")};
+    ${(props) =>
+    props.is_valid === "true" ? "rgb(221, 223, 229)" : "rgb(255, 153, 150)"};
   padding: 0.75rem 2.8125rem 0.75rem 1rem;
   width: 100%;
   background: #fbfbfd;
@@ -40,5 +38,3 @@ export const StyledSelect = styled.select<optionProps>`
   height: 3.125rem;
 `;
 export const StyledOption = styled.option<optionProps>``;
-
-

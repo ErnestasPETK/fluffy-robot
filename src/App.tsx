@@ -3,7 +3,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import FallbackError from "./pages/FallbackError.tsx";
 import Home from "./pages/Home.tsx";
 import Signup from "./pages/Signup.tsx";
-import { useContext, useState } from 'react';
+import { useContext, useState } from "react";
 import { GlobalContext } from "./context/GlobalContext.tsx";
 
 const router = createBrowserRouter([
@@ -30,15 +30,16 @@ const router = createBrowserRouter([
 function App() {
   const context = useContext(GlobalContext);
   const { theme: defaultTheme } = context;
-  const [theme, setTheme] = useState(defaultTheme)
+  const [theme, setTheme] = useState(defaultTheme);
 
   return (
     <ErrorBoundary FallbackComponent={FallbackError}>
-      <GlobalContext.Provider value={{ ...context, theme: theme, setTheme: setTheme }} >
-
+      <GlobalContext.Provider
+        value={{ ...context, theme: theme, setTheme: setTheme }}
+      >
         <RouterProvider router={router} />
       </GlobalContext.Provider>
-    </ErrorBoundary >
+    </ErrorBoundary>
   );
 }
 

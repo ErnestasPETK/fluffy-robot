@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   font-size: 1rem;
-  min-height: 1.5rem;
+  min-height: 2.5rem;
   min-width: fit-content;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   border: 0px;
@@ -15,14 +15,14 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   background: none;
   color: rgb(59, 191, 194);
   outline: rgb(59, 191, 194) solid 0.125rem;
   outline-offset: -0.125rem;
 
   @media (min-width: 768px) {
-    max-width:30%;
+    max-width: 30%;
   }
   @media (min-width: 1024px) {
   }
@@ -31,13 +31,12 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledPrimaryButton = styled(StyledButton)`
-background-color: rgb(59, 191, 194);
+  background-color: rgb(59, 191, 194);
   color: white;
   &:hover {
     background-color: rgba(59, 191, 194, 0.7);
     outline: rgba(59, 191, 194, 0.7) solid 0.125rem;
   }
-
 
   @media (min-width: 768px) {
   }
@@ -50,7 +49,6 @@ background-color: rgb(59, 191, 194);
 `;
 
 export const StyledSecondaryButton = styled(StyledButton)`
-  
   &:hover {
     outline: rgba(59, 191, 194, 0.7) solid 0.125rem;
     color: rgba(59, 191, 194, 0.7);

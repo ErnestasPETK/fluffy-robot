@@ -1,15 +1,16 @@
-:root{
-  --default-font-family: "Poppins, sans-serif";
-  --dark-background: rgb(0,0,0);
-  --dark-text-color: rgb(255,255,255);
-  
-  --light-background: rgb(255,255,255);
-  --light-text-color: rgb(0,0,0);
+:root {
+  --default-font-family: "Helvetica, Arial, sans-serif";
+  --dark-background: rgba(42, 47, 67, 1);
+  --dark-text-color: rgb(255, 255, 255);
+
+  --light-background: rgb(255, 255, 255);
+  --light-text-color: rgb(52, 57, 74);
+  ;
 
 }
 
-body{
+body {
   font-family: var(--default-font-family);
   width: 100vw;
-  margin:0;
+  margin: 0;
 }
