@@ -39,9 +39,11 @@ const SignupForm = (): JSX.Element => {
     });
 
     const onChange = (
-        event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+        event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement> | React.FormEvent<HTMLOptionElement> | any
     ): void => {
+
         const { name, value } = event.target;
+
         setUserData({ ...userData, [name]: value });
     };
 

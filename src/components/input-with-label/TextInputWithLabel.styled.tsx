@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Props } from "./TextInputWithLabel";
 
-type inputProps = React.InputHTMLAttributes<HTMLInputElement> & Props;
+type inputProps = Pick<Props, "name" | "is_valid">;
 
 export const StyledContainer = styled.div`
   display: flex;

@@ -1,24 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
+// import type { Meta, StoryObj } from '@storybook/react';
 
-import InputWithLabel from './TextInputWithLabel.tsx';
+// import TextInputWithLabel from './TextInputWithLabel.tsx';
 
 
-const meta: Meta<typeof InputWithLabel> = {
-    title: 'Generic_Input_with_Label',
-    component: InputWithLabel,
-};
+// const meta: Meta<typeof TextInputWithLabel> = {
+//     title: 'Generic_Input_with_Label',
+//     component: TextInputWithLabel,
 
-export default meta;
-type Story = StoryObj<typeof InputWithLabel>;
 
-const handleInput = () => null;
+// };
 
-export const Inactive: Story = {
-    render: () => <InputWithLabel active={false} valid name="inactive" placeholder="Inactive input" label="Inactive input: " type="text" onChangeFn={handleInput} />,
-};
-export const Active: Story = {
-    render: () => <InputWithLabel active valid name="active" placeholder="Active input" label="Active input: " type="text" onChangeFn={handleInput} />,
-};
-export const ActiveInvalid: Story = {
-    render: () => <InputWithLabel active valid={false} name="invalid" placeholder="Invalid input" label="Invalid input: " type="text" messageType="ERROR" text="Invalid input" onChangeFn={handleInput} />,
-};
+// export default meta;
+// type Story = StoryObj<typeof TextInputWithLabel>;
+
+// const handleInput = () => null;
+
+// export const Inactive: Story = {
+//     render: () => <TextInputWithLabel active={false} is_valid="true" name="inactive" placeholder="Inactive input" label="Inactive input: " type="text" onChangeFn={handleInput} />,
+// };

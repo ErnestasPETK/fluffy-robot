@@ -1,6 +1,6 @@
 import { StyledForm, StyledTitle } from "./Form.styled";
 
-type Props = {
+export type Props = {
     title: string;
     children?: React.ReactNode;
     onSubmit: (

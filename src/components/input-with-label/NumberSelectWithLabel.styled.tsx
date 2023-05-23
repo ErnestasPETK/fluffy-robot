@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Props } from "./NumberSelectWithLabel";
 
-type optionProps = Props;
+type selectProps = Pick<Props, "is_valid">
+type optionProps = Pick<Props, "name" | "type">
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -23,8 +24,8 @@ export const StyledLabel = styled.label`
   }
 `;
 
-export const StyledSelect = styled.select<optionProps>`
-  border: 0.0625rem solid
+export const StyledSelect = styled.select<selectProps>`
+border: 0.0625rem solid
     ${(props) =>
     props.is_valid === "true" ? "rgb(221, 223, 229)" : "rgb(255, 153, 150)"};
   padding: 0.75rem 2.8125rem 0.75rem 1rem;
