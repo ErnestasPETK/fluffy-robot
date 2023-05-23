@@ -1,0 +1,15 @@
+:root{
+  --default-font-family: "Poppins, sans-serif";
+  --dark-background: rgb(0,0,0);
+  --dark-text-color: rgb(255,255,255);
+  
+  --light-background: rgb(255,255,255);
+  --light-text-color: rgb(0,0,0);
+
+}
+
+body{
+  font-family: var(--default-font-family);
+  width: 100vw;
+  margin:0;
+}
