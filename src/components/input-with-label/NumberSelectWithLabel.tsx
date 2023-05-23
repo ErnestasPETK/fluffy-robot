@@ -25,7 +25,10 @@ export interface Props extends Message, ControlProps {
     placeholder: string;
     value?: string;
     onChangeFn: (
-        event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement> | React.FormEvent<HTMLSelectElement> | any
+        event:
+            | React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+            | React.FormEvent<HTMLSelectElement>
+            | any
     ) => void;
     numberRange: number;
 }
@@ -55,9 +58,13 @@ const NumberSelectWithLabel = (props: Props): JSX.Element => {
             <StyledSelect
                 disabled={!active}
                 is_valid={is_valid}
+                placeholder={placeholder}
                 {...register(name)}
                 onChange={(event) => onChangeFn(event)}
             >
+                <StyledOption name="default" id="default" type={type} disabled selected>
+                    {placeholder}
+                </StyledOption>
                 {numberArray.map((value) => {
                     return (
                         <StyledOption
@@ -65,11 +72,8 @@ const NumberSelectWithLabel = (props: Props): JSX.Element => {
                             name={name}
                             id={name}
                             type={type}
-                            placeholder={placeholder}
                             value={value}
-                            onChange={(event) => onChangeFn(event)}
                         >
-                            {/* {" "} */}
                             {value}
                         </StyledOption>
                     );
